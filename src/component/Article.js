@@ -28,7 +28,7 @@ function Article() {
         setComments(prevComments=>[...prevComments, value]);
         setInputComment("");
     }
-
+ 
     return (
         <>
             <div className="card mb-3" id={articleId}>
