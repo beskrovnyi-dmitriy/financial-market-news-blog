@@ -29,7 +29,6 @@ function Article() {
         setInputComment("");
     }
  
-    const a = 5;
     return (
         <>
             <div className="card mb-3" id={articleId}>
