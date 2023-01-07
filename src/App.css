@@ -1,3 +1,4 @@
+
 header{
     width: 100%;
     height: 50px;
@@ -5,14 +6,140 @@ header{
     display: flex;
     align-items: center;
 }
-
+main{
+    min-height: calc(100vh - 120px);
+}
+footer{
+    height: 50px;
+    background-color: grey;
+}
 .nav-articles{
     font-size: 23px;
     font-weight: 500;
     text-decoration: none;
     color: white;
-    margin-left: 50px;
+    margin-left: 60px;
+}
+.nav-articles:hover{
+    color: yellow
 }
 .nav-articles:active{
     color: red;
+}
+.cards-articles{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+.post{
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    height: 150px;
+    text-align: start;
+    transition: all 0.5s linear;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px black;
+}
+.post:hover{
+    transform: scale(1.05);
+    z-index: 3;
+}
+.post a{
+    text-decoration: none;
+    color: black;
+}
+.post p{
+    position: relative;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.article{
+    margin: 10px auto;
+    width: 93%;
+}
+.input-comment{
+    margin-right: 20px;
+}
+.commentsList{
+    padding: 0;
+    margin-top: 20px;
+}
+.commentBox{
+    display: flex;
+    align-items: center;
+}
+.comment{
+    list-style-type: none;
+    margin: 10px 0 10px 20px;
+    font-size: 17px;
+}
+.top-panel{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.top-panel > button{
+    background-color: rgb(139, 25, 25);
+    width: 150px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px black;
+}
+.top-panel > button:hover{
+    background-color: rgb(105, 18, 18);
+}
+.top-panel > button:active{
+    box-shadow: 0 0 0 black;
+}
+.createBack{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.344);
+    z-index: 9;
+}
+.create-article{
+    width: 60%;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgb(110, 101, 101);
+}
+.create-article>h5{
+    color: white;
+}
+.create-article>label{
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+.create-article>button{
+    margin-top: 20px;
+    width: 150px;
+    background-color: rgb(105, 18, 18);
+    box-shadow: 3px 3px 5px black;
+    color: white;
+}
+.create-article>button:hover{
+    background-color: rgb(105, 18, 18);
+}
+.cards-articles>button:active{
+    box-shadow: 0px 0px 0px black;
+
 }
